@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Blue Moon | Home</title>
+    <link rel="stylesheet" type="text/css" href="styles/homecss.css">
+    <script src="https://code.jquery.com/jquery-1.10.2.js" integrity="sha256-it5nQKHTz+34HijZJQkpNBIHsjpV8b6QzMJs9tmOBSo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+</head>
+
+<header>
+  <div class="container">
+    <img src="photos/images.png"  class="logo" height="80" width="250">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="OurRoom.html">Our rooms</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="Services.html">Services</a></li>
+        <li><a href="FAQs.html">FAQs</a></li>
+        <li><a href="ContactUs.html">Contact Us</a></li>
+        <li>
+          <form action="Booking.html">
+            <input type="submit" value="BOOK NOW">
+          </form>
+        </li>
+      </ul>
+    </nav>
+  </div>
+  </header>
+
+<body>
+  <div class="welcome"><img src="photos/a4c132ada8c1797c0cbd93d8609a9ac4.gif" alt="Welcome"></div>
+
+  <div class="galleryContainer">
+      <div class="slideShowContainer">
+          <div onclick="plusSlides(-1)" class="nextPrevBtn leftArrow"><span class="arrow arrowLeft"></span></div>
+          <div onclick="plusSlides(1)" class="nextPrevBtn rightArrow"><span class="arrow arrowRight"></span></div>
+          <div class="captionTextHolder"><p class="captionText slideTextFromTop"></p></div>
+          <div class="imageHolder">
+              <img src="photos/HDL1.jpg">1366X768
+              <p class="captionText">Swimming Pool</p>
+          </div>
+          <div class="imageHolder">
+              <img src="photos/HDL2.jpg">
+              <p class="captionText">Seri Rasa Cafe</p>
+          </div>
+          <div class="imageHolder">
+              <img src="photos/HDL3.jpg">
+              <p class="captionText">Lobby and Receptionist Area</p>
+          </div>
+      </div>
+      <div id="dotsContainer"></div>
+  </div>
+
+
+
+  <h2>Check your Availability</h2>
+  <div class="container-date">
+        <div class="date"></div>
+        <label> <i class="fa fa-calendar"></i>Check In:
+        <input type="date" id="checkIn">
+        <label> <i class="fa fa-calendar"></i>Check Out:
+        <input type="date" id="checkOut">
+        <label><i class="fa fa-male"></i> Adults</label>
+        <input type="number" id="adults" placeholder="1">
+        <label><i class="fa fa-child"></i> Kids</label>
+        <input class="g-input g-border" type="number" id="child" placeholder="0"></form>
+        <button id="myBtn">Check Availability</button>
+  </div>
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <div class="modaldates">
+        <h6>Check In Date: <p2 id="checkInDate"></p2></h6>
+        <h6>Check Out Date: <p2 id="checkOutDate"></p2></h6>
+        <h6>Adults: <p2 id="adultsAMT"></p2></h6>
+        <h6>Children: <p2 id="childAMT"></p2></h6>
+      </div>
+
+      <div class='availableRoom'>
+        <div class='row'>
+          <div class='column'>
+            <div class='ARImg'>
+              <img src="photos/deluxe-suite2.jpg" id="ymalPic" height="300px" width="500px"></br></br></br>
+              <img src="photos/double-room1.jpg" id="ymalPic" height="300px" width="500px"></br></br></br>
+              <img src="photos/premier-junior1.jpg" id="ymalPic" height="300px" width="500px"></br></br></br>
+          </div>
+        </div>
+        <div class='column'>
+          <div class='ARDetails'>
+            <div class="ARD1">
+            <p class="ymalCont">Deluxe Suite</p>
+            <p class="ymalPrice">RM220/night</p>
+            <div class="button_cont" align="right"></div>
+            <a class="buttonSD" href="RoomDetailDeluxe.html"><span>See Details</a>
+            </div>
+            <div class="ARD2">
+            <p class="ymalCont">Double Room</p>
+            <p class="ymalPrice">RM160/night</p>
+            <div class="button_cont" align="right"></div>
+            <a class="buttonSD" href="RoomDetail.html"><span>See Details</a>
+            </div>
+            <div class="ARD3">
+            <p class="ymalCont">Premiere Junior Room</p>
+            <p class="ymalPrice">RM250/night</p>
+            <div class="button_cont" align="right"></div>
+            <a class="buttonSD" href="RoomDetailPreJunior.html"><span>See Details</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</div>
+
+
+
+    <div id="features" class="text-center">
+      <div class="container">
+        <div class="section-title">
+          <h2>Featured Rooms of the Month</h2>
+        </div>
+        <div class="container1">
+  <img src="photos/premier-junior1.jpg" alt="Premier Junior Room" class="image"
+  style="width:400px;height:280px">
+  <div class="overlay">
+    <div class="text"><h4>Premier Junior Room</h4>
+      <p>Spanning 33sqm with a small living area, </br>this premier junior room will be your perfect stay </br> at Hatten Hotel at such an affordable rate</p></div>
+  </div>
+</div>
+
+<div class="container1">
+<img src="photos/double-room1.jpg" alt="Double Room" class="image"
+style="width:400px;height:280px">
+<div class="overlay1">
+  <div class="text"><h4>Double Room</h4>
+    <p>Sea or city view is available for this spacious room</br> with one queen bed that is suitable for </br>couples or small family. </p></div>
+</div>
+</div>
+
+<div class="container1">
+<img src="photos/deluxe-suite2.jpg" alt="Deluxe Suite" class="image"
+style="width:400px;height:280px">
+<div class="overlay2"><div class="text"><h4>Deluxe Suite</h4>
+  <p>Enjoy the city lights of Bandar Melaka </br> in this spacious room with two queen bed </br> that is suitable for big groups of people </p></div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="AU">
+<div class="AUcontainer">
+  <div id="rowAU">
+    <div class="aboutUS1">
+      <div class="aboutUS2">
+        <div class="section-title">
+          <h2>About Us</h2>
+        </div>
+        <p>Established in 2024, Hotel bluemoon has managed to become one of the most prestigious
+        4 star hotel in the city of hyderabad, the city of history. Located in the heart of 'jublie hills', Hotel bluemoon has managed to become the top choices among locals and foreigners.</p>
+        <a href="about.html" class="VMbutton">View More</a>
+      </div>
+    </div>
+    <div class="aboutUS1">
+      <div class="team-img"><img src="photos/HDL1.jpg" alt="..."></div>
+    </div>
+  </div>
+</div>
+</div>
+
+</body>
+
+<footer>
+  <footer class="footer-distributed">
+
+        <div class="footer-left">
+            <img src="photos/images.png">
+          <h3>About<span> Hotel bluemoon</span></h3>
+
+          <p class="footer-links">
+            <a href="index.html">Home</a>
+            |
+            <a href="Services.html">Services</a>
+            |
+            <a href="about.html">About</a>
+            |
+            <a href="ContactUs.html">Contact</a>
+          </p>
+
+          <p class="footer-company-name">© 2020 Hotel bluemoonSdn. Bhd.</p>
+        </div>
+
+        <div class="footer-center">
+          <div>
+            <i class="fa fa-map-marker"></i>
+              <p><span>Lane 2,  jublie hills,hyderabad</span>
+              500015,telanagana.</p>
+          </div>
+
+          <div>
+            <i class="fa fa-phone"></i>
+            <p><a href="tel:60340219838">+60 34-0219838</a></p>
+          </div>
+          <div>
+            <i class="fa fa-envelope"></i>
+            <p><a href="mailto:inquiries@hotelbluemoon.com">inquiries@hotelbluemoon.com</a></p>
+          </div>
+        </div>
+      <div class="footer-right">
+        <p class="footer-company-about">
+          <span>About the hotel</span>
+          We provide wide range of rooms and facilities with spectacular comfort and affordable prices.</p>
+        <div class="footer-icons">
+          <a href="https://en-gb.facebook.com/"><i class="fa fa-facebook"></i></a>
+          <a href="https://twitter.com/explore"><i class="fa fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+        </div>
+      </div>
+      </footer>
+
+<script src="javascript/home.js"></script>
+
+</html>

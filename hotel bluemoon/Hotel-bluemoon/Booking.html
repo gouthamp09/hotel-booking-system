@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Hotel Del Luna | Booking Page</title>
+    <link rel="stylesheet" href="styles/Booking.css">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+
+	<link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <script src="javascript/Booking.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js" integrity="sha512-ToRWKKOvhBSS8EtqSflysM/S7v9bB9V0X3B1+E7xo7XZBEZCPL3VX5SFIp8zxY19r7Sz0svqQVbAOx+QcLQSAQ==" crossorigin="anonymous"></script>
+
+    </script>
+
+    </script>
+  </head>
+
+  <header>
+    <div class="container">
+      <img src="photos/images.png" alt="DelLunaLogo" class="logo" height="80" width="250">
+
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="OurRoom.html">Our rooms</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="Services.html">Services</a></li>
+          <li><a href="FAQs.html">FAQs</a></li>
+          <li><a href="ContactUs.html">Contact Us</a></li>
+          <li>
+            <form action="Booking.html">
+              <button type="submit">BOOK NOW</button>
+            </form>
+        </li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <body>
+    <h1 class="h1Book">HOTEL ROOM BOOKING FORM</h1>
+
+    <div class="containerCU">
+
+      <div class="headerbook">
+        <center><p>Please fill in the form. Your registeration will be verified prior to your arrival.</p><center>
+      </div>
+
+
+    <form action="" class="form" id="form" onsubmit="return validation()">
+      <div class="row">
+        <div class="column">
+
+        <h3>Personal Information</h3>
+
+        <div class="form-control">
+          <label><strong>Name</strong></label>
+          <input  type="text" name="NAME" id="name" required>
+        </div>
+
+        <div class="form-control">
+          <label><strong>Phone Number</strong></label>
+          <input type="text" placeholder="+60..." name="PHONE NUMBER" id="phoneNum" required>
+
+        </div>
+
+        <div class="form-control">
+          <label><strong>Address</strong></label>
+          <input type="text" placeholder="Street Address Line..." name="ADDRESS" id="address" ><br/>
+
+        </div>
+
+        <div class="form-control">
+          <input type="text" size="6" placeholder="Postal / Zip Code" name="POSTAL / ZIP CODE" id="postcode" required>
+
+        </div>
+
+        <div class="form-control">
+          <input type="text" size="15" placeholder="State" name="State" id="state" required>
+
+        </div>
+
+        <div class="form-control">
+          <label><strong>Email</strong></label>
+          <input type="email" id="email" name="E-MAIL" placeholder="email@example.com" id="email" required>
+        </div>
+
+        <div class="form-control">
+          <label><strong>Send Request</strong></label><br/>
+          <textarea cols="40" rows="4" placeholder="Send your request here" id="request" name="REQUEST"></textarea><br/><br/>
+        </div>
+
+        </div>
+        <br></br>
+        <h3>Booking Information</h3>
+        <label><strong>Type of Room</strong></label>
+
+        <select id="room" name="ROOM TYPE" required>
+          <option value="">Select Room</option>
+          <option value="220">Deluxe Suite</option>
+          <option value="160">Double Room</option>
+          <option value="250">Premiere Junior</option>
+          <option value="120">Single Superior</option>
+        </select><br/>
+
+        <label><strong>Check-In</strong></label>
+        <input type="date" id="checkin" name="CHECK-IN DATE" required>
+
+        <label><strong>Check-Out<strong></label>
+        <input type="date" id="checkout" name="CHECK-OUT" required>
+        <br>
+
+        <label><strong>Number of Guest</strong></label>
+        <input type="number" id="guest" name="NO. OF GUEST" required><br/>
+
+        <label><strong>Payment Option</strong></label><br>
+        <input type="radio" id="walkin" name="PAYMENT METHOD" onclick="yesCheck()" value="Walk-In">
+        <label><strong>Walk-In</strong></label>
+        <input type="radio" id="online" name="PAYMENT METHOD" onclick="yesCheck()" value="Online">
+        <label><strong>Online</strong></label><br>
+
+        <div id="ifOnline" style="display:none;">
+          <br>
+          <label><strong>Card No</strong></label><br>
+          <input type="number" name="CARD NO" id="cardNum">
+        </div>
+
+
+        <div id=errorMessage></div><br>
+        <p>Please confirm all the information before click submit.</p>
+
+
+        <button type="submit">SUBMIT</button>
+        <button type="reset">RESET</button>
+      </div>
+
+
+    </form>
+
+    </div>
+    <footer class="footer-distributed">
+
+          <div class="footer-left">
+              <img src="photos/banner.png">
+            <h3>About<span> Hotel Del Luna</span></h3>
+
+            <p class="footer-links">
+              <a href="index.html">Home</a>
+              |
+              <a href="Services.html">Services</a>
+              |
+              <a href="about.html">About</a>
+              |
+              <a href="ContactUs.html">Contact</a>
+            </p>
+
+            <p class="footer-company-name">© 2020 Hotel Del Luna Sdn. Bhd.</p>
+          </div>
+
+          <div class="footer-center">
+            <div>
+              <i class="fa fa-map-marker"></i>
+                <p><span>Lane 2,  Kota Syahbandar, Impression City</span>
+                75200, Bandar Melaka.</p>
+            </div>
+
+            <div>
+              <i class="fa fa-phone"></i>
+              <p><a href="tel:60340219838">+60 34-0219838</a></p>
+            </div>
+            <div>
+              <i class="fa fa-envelope"></i>
+              <p><a href="mailto:inquiries@hoteldelluna.com">inquiries@hoteldelluna.com</a></p>
+            </div>
+          </div>
+        <div class="footer-right">
+          <p class="footer-company-about">
+            <span>About the hotel</span>
+            We provide wide range of rooms and facilities with spectacular comfort and affordable prices.</p>
+          <div class="footer-icons">
+            <a href="https://en-gb.facebook.com/"><i class="fa fa-facebook"></i></a>
+            <a href="https://twitter.com/explore"><i class="fa fa-twitter"></i></a>
+            <a href="https://www.instagram.com/"><i class="fa fa-instagram"></i></a>
+          </div>
+        </div>
+    </footer>
+  </body>
+
+</html>
